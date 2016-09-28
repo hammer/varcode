@@ -32,19 +32,14 @@ Example
 ```python
 import varcode
 
-# Load TCGA MAF containing variants from their
+# Load TCGA MAF
 variants = varcode.load_maf("tcga-ovarian-cancer-variants.maf")
 
 print(variants)
 ### <VariantCollection from 'tcga-ovarian-cancer-variants.maf' with 6428 elements>
 ###  -- Variant(contig=1, start=69538, ref=G, alt=A, genome=GRCh37)
 ###  -- Variant(contig=1, start=881892, ref=T, alt=G, genome=GRCh37)
-###  -- Variant(contig=1, start=3389714, ref=G, alt=A, genome=GRCh37)
-###  -- Variant(contig=1, start=3624325, ref=G, alt=T, genome=GRCh37)
 ###  ...
-
-# you can index into a VariantCollection and get back a Variant object
-variant = variants[0]
 
 # groupby_gene_name returns a dictionary whose keys are gene names
 # and whose values are themselves VariantCollections
